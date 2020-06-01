@@ -1,0 +1,12 @@
+[submodule "platforms/cmsis_freertos_stm32f7"]
+	path = platforms/cmsis_freertos_stm32f7
+	url = https://github.com/tstellanova/cmsis_freertos_stm32f7.git
+[submodule "platforms/cmsis_freertos_stm32h7"]
+	path = platforms/cmsis_freertos_stm32h7
+	url = https://github.com/tstellanova/cmsis_freertos_stm32h7
+[submodule "platforms/cmsis_freertos_stm32f3"]
+	path = platforms/cmsis_freertos_stm32f3
+	url = https://github.com/tstellanova/cmsis_freertos_stm32f3
+[submodule "platforms/cmsis_freertos_stm32f4"]
+	path = platforms/cmsis_freertos_stm32f4
+	url = https://github.com/tstellanova/cmsis_freertos_stm32f4

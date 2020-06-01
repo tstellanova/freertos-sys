@@ -1,0 +1,18 @@
+[package]
+name = "freertos_rsbuild"
+version = "0.1.0"
+authors = ["Todd Stellanova <tstellanova@users.noreply.github.com>"]
+edition = "2018"
+
+[dependencies]
+cmsis-rtos2 = { git="https://github.com/tstellanova/cmsis_rtos2_rs"}
+
+[build-dependencies]
+#cc = "1.0"
+
+# to select a stm32 family, use one of the following as the default
+[features]
+stm32f3x = []
+stm32f4x = []
+stm32f7x = []
+stm32h7x = []
