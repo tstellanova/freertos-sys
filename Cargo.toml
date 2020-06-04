@@ -1,18 +1,33 @@
 [package]
-name = "freertos_rsbuild"
-version = "0.1.0"
+name = "freertos-sys"
+version = "0.1.1"
 authors = ["Todd Stellanova <tstellanova@users.noreply.github.com>"]
 edition = "2018"
+license = "BSD-3-Clause"
+repository = "https://github.com/tstellanova/freertos-sys"
+description = "Builds FreeRTOS from source for specific device families and provides easy linking"
+links = "cmsis_rtos2"
+
+categories = [
+    "embedded",
+    "hardware-support",
+    "no-std",
+]
+keywords = [
+    "embedded-hal-driver",
+    "freertos",
+    "rtos",
+    "rtx",
+]
 
 [dependencies]
-cmsis-rtos2 = { git="https://github.com/tstellanova/cmsis_rtos2_rs"}
+cmsis-rtos2 = "0.1.1"
 
-[build-dependencies]
-#cc = "1.0"
 
-# to select a stm32 family, use one of the following as the default
+# to select a supported device family, select one of the following features
 [features]
-stm32f3x = []
-stm32f4x = []
-stm32f7x = []
-stm32h7x = []
+family-selected = []
+stm32f3x = ["family-selected"]
+stm32f4x = ["family-selected"]
+stm32f7x = ["family-selected"]
+stm32h7x = ["family-selected"]

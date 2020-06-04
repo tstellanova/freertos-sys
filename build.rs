@@ -5,7 +5,9 @@ use std::process::Command;
 fn main() {
     let work_dir = env::var("CARGO_MANIFEST_DIR").unwrap();
 
-    let platform_subdir = "cmsis_freertos_stm32f7";
+    #[cfg(not(feature="device-selected"))]
+        let platform_subdir = "cmsis_freertos_stm32f4";
+
     #[cfg(feature = "stm32f3x")]
         let platform_subdir = "cmsis_freertos_stm32f3";
     #[cfg(feature = "stm32f4x")]
@@ -16,7 +18,6 @@ fn main() {
         let platform_subdir = "cmsis_freertos_stm32h7";
 
     let platform_dir = format!("{}/platforms/{}", work_dir, platform_subdir);
-    eprintln!("platform_dir: {}", platform_dir);
 
     // clean library each time?
     Command::new("make")
