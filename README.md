@@ -1,10 +1,12 @@
 # freertos_rsbuild
 
-Use rust facilities to build freertos from source, 
-and provide it as a dependency crate for hybrid rust apps.
-
 Add this crate to your rust applications Cargo.toml to ensure that
 the FreeRTOS library is included in your build.
+
+Uses rust facilities to build freertos from source, 
+and provide it as a dependency crate for hybrid rust apps.
+Currently this uses `make` and ARM gcc cross-compilation. 
+It does not use the `cc` crate. 
 
 This crate exports the [CMSIS RTOS2 API]() to make operating
 FreeRTOS tasks using rust as simple as possible.
