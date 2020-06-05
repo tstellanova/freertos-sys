@@ -1,4 +1,4 @@
-# freertos_rsbuild
+# freertos-sys
 
 Add this crate to your rust applications Cargo.toml to ensure that
 the FreeRTOS library is included in your build.
