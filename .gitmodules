@@ -1,6 +1,6 @@
 [submodule "platforms/cmsis_freertos_stm32f7"]
 	path = platforms/cmsis_freertos_stm32f7
-	url = https://github.com/tstellanova/cmsis_freertos_stm32f7.git
+	url = https://github.com/tstellanova/cmsis_freertos_stm32f7
 [submodule "platforms/cmsis_freertos_stm32h7"]
 	path = platforms/cmsis_freertos_stm32h7
 	url = https://github.com/tstellanova/cmsis_freertos_stm32h7
