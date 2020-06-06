@@ -3,10 +3,13 @@
 Add this crate to your rust applications Cargo.toml to ensure that
 the FreeRTOS library is included in your build.
 
-Uses rust facilities to build freertos from source, 
+This crate builds a static freertos library from source, 
 and provide it as a dependency crate for hybrid rust apps.
 Currently this uses `make` and ARM gcc cross-compilation. 
-It does not use the `cc` crate. 
+It does not use, for example, the `cc` crate.  
+This means that you will need to have arm cross-compilation
+tools installed on your system, such as 
+`arm-none-eabi-gcc`
 
 This crate exports the [CMSIS RTOS2 API]() to make operating
 FreeRTOS tasks using rust as simple as possible.
