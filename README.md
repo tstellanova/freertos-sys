@@ -11,7 +11,8 @@ This means that you will need to have arm cross-compilation
 tools installed on your system, such as 
 `arm-none-eabi-gcc`
 
-This crate exports the [CMSIS RTOS2 API]() to make operating
+This crate exports the [CMSIS RTOS2 API](https://www.keil.com/pack/doc/CMSIS/RTOS2/html/index.htm)
+ to make operating
 FreeRTOS tasks using rust as simple as possible.
 
 ## Usage
@@ -20,6 +21,8 @@ In your `Cargo.toml` select a device family by using a feature:
 ``` toml
 freertos-sys = {version="0.1.1", features=["stm32f4x"] }
 ```
+
+Example application tested on stm32f401CxUx: [rolkien](https://www.github.com/tstellanova/rolkien)
 
 ## License
 
@@ -33,7 +36,7 @@ a crate feature, please open a pull request or issue.
 
 - [x] Supports stm32f3, f4, f7, h7
 - [x] Supports release library build
-- [ ] Supports debug library build
-- [ ] Example application
+- [x] Supports debug library build
+- [x] Example application
 - [ ] CI build and test
 
