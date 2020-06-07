@@ -1,6 +1,6 @@
 [package]
 name = "freertos-sys"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Todd Stellanova <tstellanova@users.noreply.github.com>"]
 edition = "2018"
 license = "BSD-3-Clause"
@@ -14,7 +14,6 @@ categories = [
     "no-std",
 ]
 keywords = [
-    "embedded-hal-driver",
     "freertos",
     "rtos",
     "rtx",
@@ -26,6 +25,8 @@ cmsis-rtos2 = "0.1.1"
 
 # to select a supported device family, select one of the following features
 [features]
+# enable debugging symbols for FreeRTOS itself
+dbgsym = []
 family-selected = []
 stm32f3x = ["family-selected"]
 stm32f4x = ["family-selected"]

@@ -7,7 +7,7 @@ fn main() {
     let out_dir = env::var("OUT_DIR").unwrap();
     eprintln!("out_dir: {}",out_dir);
 
-    #[cfg(not(feature="device-selected"))]
+    #[cfg(not(feature="family-selected"))]
         let platform_subdir = "cmsis_freertos_stm32f4";
 
     #[cfg(feature = "stm32f3x")]
@@ -25,14 +25,12 @@ fn main() {
     // force a rebuild on change
     println!("cargo:rerun-if-changed={}",platform_dir);
 
-    // Command::new("make")
-    //     .current_dir(platform_dir.clone())
-    //     .arg("clean")
-    //     .output()
-    //     .expect("make clean failed ");
+    #[cfg(not(feature="dbgsym"))]
+    let (debug_flag, opt_flag) = ("DEBUG=0", "OPT=-O1");
 
-    let debug_flag = "DEBUG=0"; // DEBUG = 1
-    let opt_flag = "OPT=-O1"; // OPT = -Og
+    #[cfg(feature="dbgsym")]
+    let (debug_flag, opt_flag) = ("DEBUG=1", "OPT=-Og");
+
     let lib_out_dir = format!("{}/freertos_build",out_dir);
     let build_dir = format!("BUILD_DIR={}",lib_out_dir);
 
