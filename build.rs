@@ -18,6 +18,9 @@ fn main() {
         let platform_subdir = "cmsis_freertos_stm32f7";
     #[cfg(feature = "stm32h7x")]
         let platform_subdir = "cmsis_freertos_stm32h7";
+    #[cfg(feature = "nrf52x")]
+        let platform_subdir = "cmsis_freertos_nrf52";
+
 
     let platform_dir = format!("{}/platforms/{}", work_dir, platform_subdir);
     eprintln!("platform_dir: {}",platform_dir);
@@ -41,7 +44,6 @@ fn main() {
         .arg(build_dir)
         .output()
          .expect("make failed ");
-
 
     // static library should now be in the build directory of the specific platform
     // println!("cargo:rustc-link-search={}/build/", platform_dir.clone());

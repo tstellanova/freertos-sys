@@ -10,3 +10,6 @@
 [submodule "platforms/cmsis_freertos_stm32f4"]
 	path = platforms/cmsis_freertos_stm32f4
 	url = https://github.com/tstellanova/cmsis_freertos_stm32f4
+[submodule "platforms/cmsis_freertos_nrf52"]
+	path = platforms/cmsis_freertos_nrf52
+	url = https://github.com/tstellanova/cmsis_freertos_nrf52.git

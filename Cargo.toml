@@ -28,7 +28,9 @@ cmsis-rtos2 = "0.1.1"
 # enable debugging symbols for FreeRTOS itself
 dbgsym = []
 family-selected = []
+# choose ONE of the following
 stm32f3x = ["family-selected"]
 stm32f4x = ["family-selected"]
 stm32f7x = ["family-selected"]
 stm32h7x = ["family-selected"]
+nrf52x =  ["family-selected"]
